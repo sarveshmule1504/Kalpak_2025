@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - KALPAK | SSWCOE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>KALPAK</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html" class="active">Register</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Event Registration</h1>
+            <p>Fill in your details to register for Kalpak events</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-wrapper">
+                <div class="form-container">
+                    <form id="registrationForm" class="registration-form">
+                        <div class="form-group">
+                            <label for="teamLeader">Team Leader Name <span class="required">*</span></label>
+                            <input type="text" id="teamLeader" name="teamLeader" required placeholder="Enter team leader name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="teamMembers">Team Members <span class="required">*</span></label>
+                            <input type="text" id="teamMembers" name="teamMembers" required placeholder="Enter names separated by commas">
+                            <small>Separate multiple names with commas</small>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="className">Class <span class="required">*</span></label>
+                                <input type="text" id="className" name="className" required placeholder="e.g., TE Computer">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rollno">Roll Number <span class="required">*</span></label>
+                                <input type="text" id="rollno" name="rollno" required placeholder="Enter your roll number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Department <span class="required">*</span></label>
+                            <select id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Electronics & Telecommunication">Electronics & Telecommunication</option>
+                                <option value="Electrical Engineering">Electrical Engineering</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                                <option value="Information Technology">Information Technology</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event">Select Event <span class="required">*</span></label>
+                            <select id="event" name="event" required>
+                                <option value="">Choose an event</option>
+                                <option value="CodeSprint">CodeSprint</option>
+                                <option value="ByteBrawl Quiz">ByteBrawl Quiz</option>
+                                <option value="Gaming Gauntlet">Gaming Gauntlet</option>
+                                <option value="RoboRace">RoboRace</option>
+                                <option value="WebWeavers">WebWeavers</option>
+                                <option value="Startup Spark">Startup Spark</option>
+                            </select>
+                        </div>
+
+                        <div class="payment-section">
+                            <h3>Payment Details</h3>
+                            <p class="payment-instructions">Scan the QR code below to make the payment and upload the screenshot</p>
+                            
+                            <div class="qr-code-container">
+                                <img src="https://via.placeholder.com/200x200?text=Payment+QR+Code" alt="Payment QR Code" class="qr-code">
+                                <p class="payment-note">Registration Fee: ₹200 per team</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="paymentScreenshot">Payment Screenshot Link</label>
+                                <input type="url" id="paymentScreenshot" name="paymentScreenshot" placeholder="https://drive.google.com/...">
+                                <small>Upload screenshot to Google Drive and paste the shareable link (Optional)</small>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="transactionId">Transaction ID <span class="required">*</span></label>
+                                    <input type="text" id="transactionId" name="transactionId" required placeholder="Enter transaction ID">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="transactionStatus">Transaction Status <span class="required">*</span></label>
+                                    <select id="transactionStatus" name="transactionStatus" required>
+                                        <option value="">Select Status</option>
+                                        <option value="Paid">Paid</option>
+                                        <option value="Not Paid">Not Paid</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Registration</button>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Registration Successful!</h3>
+                        <p>Your registration has been submitted successfully. We'll contact you soon with further details.</p>
+                        <button onclick="location.reload()" class="btn-secondary">Register Another Team</button>
+                    </div>
+
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <div class="error-icon">✕</div>
+                        <h3>Registration Failed</h3>
+                        <p id="errorText">Something went wrong. Please try again.</p>
+                        <button onclick="hideError()" class="btn-secondary">Try Again</button>
+                    </div>
+                </div>
+
+                <div class="info-sidebar">
+                    <div class="info-card">
+                        <h3>📋 Registration Guidelines</h3>
+                        <ul>
+                            <li>Fill all required fields marked with *</li>
+                            <li>Ensure your contact details are correct</li>
+                            <li>Team size: Minimum 4 students (except ByteBrawl Quiz - 1 student)</li>
+                            <li>Complete payment before registration</li>
+                            <li>Keep your transaction ID safe</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💳 Payment Instructions</h3>
+                        <ul>
+                            <li>Scan the QR code provided</li>
+                            <li>Make payment of ₹200 per team</li>
+                            <li>Take screenshot of payment confirmation</li>
+                            <li>Upload to Google Drive and make it shareable</li>
+                            <li>Paste the link in the form</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📞 Need Help?</h3>
+                        <p>Contact us for any queries:</p>
+                        <p><strong>Email:</strong> kalpak@sswcoe.edu.in</p>
+                        <p><strong>Phone:</strong> +91 9876543210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KALPAK</h3>
+                    <p>Celebrating technology, innovation, and academic excellence</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Shree Siddheshwar Women's College of Engineering</p>
+                    <p>Solapur, Maharashtra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KALPAK - SSWCOE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
